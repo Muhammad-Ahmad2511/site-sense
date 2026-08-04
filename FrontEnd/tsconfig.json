@@ -16,10 +16,11 @@
     "checkJs": false,
 
     "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
     "paths": {
-      "@shared/*": ["src/shared/*"],
-      "@landing/*": ["src/landing/*"],
-      "@auth/*": ["src/auth/*"]
+      "@shared/*": ["./src/shared/*"],
+      "@landing/*": ["./src/landing/*"],
+      "@auth/*": ["./src/auth/*"]
     },
 
     "strict": true,
