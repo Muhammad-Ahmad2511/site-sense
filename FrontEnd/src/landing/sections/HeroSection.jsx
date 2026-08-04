@@ -47,7 +47,7 @@ export default function HeroSection({ onAnalyze, isBusy, error, inputId = 'hero-
     onAnalyze(url.trim());
   }
 
-  const headline = 'See your website the way an auditor does';
+  const headline = "Stop guessing what's breaking your website.";
 
   return (
     <section
@@ -93,8 +93,8 @@ export default function HeroSection({ onAnalyze, isBusy, error, inputId = 'hero-
           ))}
         </h1>
         <p className="max-w-lg text-[clamp(0.95rem,2vw,1.1rem)] text-muted">
-          Enter a public website address and get an evidence-based report across performance, accessibility, SEO, and
-          technical health — every finding traceable to real, collected data.
+          Enter your URL to run a real-time, evidence-based audit across SEO, performance, accessibility, and
+          conversion health—backed by real, collected data.
         </p>
 
         <form onSubmit={handleSubmit} className="mt-2 w-full max-w-xl">

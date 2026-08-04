@@ -24,7 +24,7 @@ const QUICK_LINKS = [
 const RESOURCES = [
   { label: 'Sign in', href: '/auth/' },
   { label: 'API status', href: '/api/status' },
-  { label: 'GitHub', href: 'https://github.com' }
+  { label: 'GitHub', href: 'https://github.com/Muhammad-Ahmad2511/site-sense', external: true }
 ];
 
 export default function Footer() {
@@ -65,7 +65,11 @@ export default function Footer() {
             <ul className="mt-4 space-y-3">
               {RESOURCES.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="text-[0.9rem] text-current/80 transition-colors hover:text-primary-600 dark:hover:text-primary-300">
+                  <a
+                    href={link.href}
+                    {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    className="text-[0.9rem] text-current/80 transition-colors hover:text-primary-600 dark:hover:text-primary-300"
+                  >
                     {link.label}
                   </a>
                 </li>
@@ -83,7 +87,7 @@ export default function Footer() {
                 <a href="#" className="text-[0.9rem] text-current/80 transition-colors hover:text-primary-600 dark:hover:text-primary-300">Terms of service</a>
               </li>
               <li>
-                <a href="mailto:hello@site-sense.app" className="text-[0.9rem] text-current/80 transition-colors hover:text-primary-600 dark:hover:text-primary-300">hello@site-sense.app</a>
+                <a href="mailto:mahmadimran383@gmail.com" className="text-[0.9rem] text-current/80 transition-colors hover:text-primary-600 dark:hover:text-primary-300">mahmadimran383@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -104,7 +108,9 @@ export default function Footer() {
         <div className="mt-14 flex flex-col gap-4 border-t border-[var(--glass-border)] pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[0.85rem] text-muted">© {year} Site-Sense. All rights reserved.</p>
           <a
-            href="https://github.com"
+            href="https://github.com/Muhammad-Ahmad2511/site-sense"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-[0.85rem] text-muted transition-colors hover:text-current"
           >
             <GitBranch size={15} /> GitHub

@@ -17,8 +17,8 @@ export default function TechnologyStackSection() {
         <span className="text-xs font-semibold uppercase tracking-wide text-secondary-500 dark:text-accent">Under the hood</span>
         <h2 className="mt-2 text-[clamp(1.6rem,4vw,2.25rem)] font-extrabold tracking-tight">Built on a real crawl, not a guess</h2>
         <p className="mx-auto mt-3 max-w-2xl text-sm text-muted sm:text-base">
-          The exact technologies powering Site-Sense — a rendered-browser crawl feeding deterministic rules, with AI
-          layered on top only to explain results already grounded in evidence.
+          Engineered with a real browser runner, deterministic accessibility auditing, and grounded AI models.
+          Site-Sense delivers reproducible metrics without imaginary issues.
         </p>
       </div>
 
