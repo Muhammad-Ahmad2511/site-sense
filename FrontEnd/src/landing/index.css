@@ -1,0 +1,31 @@
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Cursor-aware highlight used on pricing cards: --mx/--my are set from a
+   pointermove handler directly on the element's style, not React state, so
+   the glow tracks the pointer without a re-render per frame. */
+.spotlight {
+  position: relative;
+  isolation: isolate;
+}
+
+.spotlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(
+    480px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(47, 191, 144, 0.16),
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.spotlight:hover::before {
+  opacity: 1;
+}

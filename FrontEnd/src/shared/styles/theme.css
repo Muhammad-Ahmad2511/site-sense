@@ -1,0 +1,176 @@
+/* Self-hosted (CSP is style-src/font-src 'self' only — no external font CDNs).
+   @import must precede all other statements, including @tailwind. */
+@import '@fontsource/plus-jakarta-sans/400.css';
+@import '@fontsource/plus-jakarta-sans/500.css';
+@import '@fontsource/plus-jakarta-sans/600.css';
+@import '@fontsource/plus-jakarta-sans/700.css';
+@import '@fontsource/plus-jakarta-sans/800.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Site-Sense brand palette: primary #05B084, secondary #015A84,
+   background #F1EDEA, accent #BADFCD. Light and dark variants below are
+   derived from these four values, not invented separately. */
+:root {
+  color-scheme: light dark;
+  --bg-from: #f6f3f0;
+  --bg-via: #f1ede9;
+  --bg-to: #eaf4ee;
+  --ink: #0b201a;
+  --muted: #52655e;
+  --glass-bg: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.65);
+  --glass-header-bg: rgba(255, 255, 255, 0.68);
+  --input-bg: rgba(255, 255, 255, 0.6);
+  --input-border: rgba(11, 32, 26, 0.14);
+  --shadow: 0 30px 80px -20px rgba(1, 41, 33, 0.28);
+  --track: rgba(11, 32, 26, 0.07);
+  --accent: #015a84;
+  --accent-2: #05b084;
+  --accent-3: #badfcd;
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --bg-from: #04120f;
+  --bg-via: #051a22;
+  --bg-to: #071a14;
+  --ink: #eef7f3;
+  --muted: #9fb4ac;
+  --glass-bg: rgba(8, 24, 20, 0.55);
+  --glass-border: rgba(186, 223, 205, 0.14);
+  --glass-header-bg: rgba(8, 24, 20, 0.7);
+  --input-bg: rgba(255, 255, 255, 0.06);
+  --input-border: rgba(255, 255, 255, 0.14);
+  --shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
+  --track: rgba(255, 255, 255, 0.1);
+  --accent: #4fd4ff;
+  --accent-2: #12e0a3;
+  --accent-3: #badfcd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --bg-from: #04120f;
+    --bg-via: #051a22;
+    --bg-to: #071a14;
+    --ink: #eef7f3;
+    --muted: #9fb4ac;
+    --glass-bg: rgba(8, 24, 20, 0.55);
+    --glass-border: rgba(186, 223, 205, 0.14);
+    --glass-header-bg: rgba(8, 24, 20, 0.7);
+    --input-bg: rgba(255, 255, 255, 0.06);
+    --input-border: rgba(255, 255, 255, 0.14);
+    --shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.6);
+    --track: rgba(255, 255, 255, 0.1);
+    --accent: #4fd4ff;
+    --accent-2: #12e0a3;
+    --accent-3: #badfcd;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  color: var(--ink);
+  background: linear-gradient(160deg, var(--bg-from), var(--bg-via) 55%, var(--bg-to));
+  overflow-x: hidden;
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+}
+
+.glass-header {
+  background: var(--glass-header-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+}
+
+.glass-input {
+  background: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--ink);
+}
+
+.glass-input::placeholder {
+  color: var(--muted);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.track-bg {
+  background: var(--track);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, var(--ink) 40%, var(--accent-2) 50%, var(--ink) 60%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 2.5s linear infinite;
+}
+
+/* Gradient-border glass card used for premium panels (hero, pricing-free
+   summary cards). A pseudo-element ring so the border can carry a gradient
+   while the card itself keeps its blur/opacity. */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(5, 176, 132, 0.55), rgba(186, 223, 205, 0.15), rgba(1, 90, 132, 0.5));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.glow-primary {
+  box-shadow: 0 0 0 1px rgba(5, 176, 132, 0.25), 0 20px 60px -20px rgba(5, 176, 132, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
