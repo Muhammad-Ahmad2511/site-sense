@@ -1,10 +1,73 @@
 {
+
+
+
   "framework": null,
+
+
+
   "buildCommand": "npm run build:vercel",
+
+
+
   "outputDirectory": "dist",
+
+
+
   "rewrites": [
-    { "source": "/auth", "destination": "/auth/index.html" },
-    { "source": "/auth/", "destination": "/auth/index.html" },
-    { "source": "/api/:path*", "destination": "https://YOUR-RAILWAY-BACKEND-URL.up.railway.app/api/:path*" }
+
+
+
+    {
+
+
+
+      "source": "/auth",
+
+
+
+      "destination": "/auth/index.html"
+
+
+
+    },
+
+
+
+    {
+
+
+
+      "source": "/auth/",
+
+
+
+      "destination": "/auth/index.html"
+
+
+
+    },
+
+
+
+    {
+
+
+
+      "source": "/api/:path*",
+
+
+
+      "destination": "https://site-sense-production.up.railway.app/api/:path*" 
+
+
+
+    }
+
+
+
   ]
-}
+
+
+
+} 
