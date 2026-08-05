@@ -194,7 +194,8 @@ VITE_AUTH_MODE=live
 -   Technical Findings
 -   <img width="1846" height="821" alt="image" src="https://github.com/user-attachments/assets/0eb0c495-bc40-476c-a9aa-89619db6970d" />
 -   AI Summary
--   <img width="1846" height="821" alt="image" src="https://github.com/user-attachments/assets/35225486-66bd-4a1a-a44c-b1fd3a6f9397" />
+-   <img width="1454" height="596" alt="image" src="https://github.com/user-attachments/assets/b20bdae5-079e-45c0-8bce-418afa6ec962" />
+
 
 
 ------------------------------------------------------------------------
