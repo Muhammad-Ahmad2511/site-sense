@@ -3,9 +3,6 @@
 > **Evidence-Based AI-Powered Website Auditing Platform** for SEO,
 > Accessibility, Performance, Technical Health, and User Experience.
 
-> **⚠ This is a starter portfolio README.** It is intentionally
-> structured so screenshots, badges, and diagrams can be expanded later.
-
 ------------------------------------------------------------------------
 
 # 🚀 Live Demo
