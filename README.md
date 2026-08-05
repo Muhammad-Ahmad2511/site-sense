@@ -181,8 +181,6 @@ VITE_AUTH_MODE=live
 
 # 📸 Screenshots
 
-> Add screenshots here later.
-
 -   Landing Page
 -   <img width="1889" height="754" alt="image" src="https://github.com/user-attachments/assets/9e5a46e4-77ec-47e6-a954-56b67b401a90" />
 -   Audit Dashboard
