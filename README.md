@@ -187,11 +187,15 @@ VITE_AUTH_MODE=live
 -   <img width="1889" height="754" alt="image" src="https://github.com/user-attachments/assets/9e5a46e4-77ec-47e6-a954-56b67b401a90" />
 -   Audit Dashboard
 -   <img width="1886" height="761" alt="image" src="https://github.com/user-attachments/assets/4392dbe3-0075-48ca-aec3-96bd56d37c31" />
-
 -   SEO Report
+-   <img width="1869" height="821" alt="image" src="https://github.com/user-attachments/assets/fdddbbb6-c389-40c4-b932-e398164d535b" />
 -   Accessibility Report
+-   <img width="1851" height="590" alt="image" src="https://github.com/user-attachments/assets/e4b42440-8c82-4d10-a8a5-9065cb59d6a2" />
 -   Technical Findings
+-   <img width="1846" height="821" alt="image" src="https://github.com/user-attachments/assets/0eb0c495-bc40-476c-a9aa-89619db6970d" />
 -   AI Summary
+-   <img width="1846" height="821" alt="image" src="https://github.com/user-attachments/assets/35225486-66bd-4a1a-a44c-b1fd3a6f9397" />
+
 
 ------------------------------------------------------------------------
 
