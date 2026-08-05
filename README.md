@@ -185,8 +185,9 @@ VITE_AUTH_MODE=live
 
 -   Landing Page
 -   <img width="1889" height="754" alt="image" src="https://github.com/user-attachments/assets/9e5a46e4-77ec-47e6-a954-56b67b401a90" />
-
 -   Audit Dashboard
+-   <img width="1886" height="761" alt="image" src="https://github.com/user-attachments/assets/4392dbe3-0075-48ca-aec3-96bd56d37c31" />
+
 -   SEO Report
 -   Accessibility Report
 -   Technical Findings
